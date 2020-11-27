@@ -1,16 +1,23 @@
 FROM golang:1.14.9-alpine
 
-ADD . /app
+# Set necessary environmet variables needed for our image
+ENV GO111MODULE=on \
+    CGO_ENABLED=0 \
+    GOOS=linux \
+    GOARCH=amd64
 
-WORKDIR /app
+# working directory
+WORKDIR /build
 
-RUN go mod download
+# Copy and download depedencies using go mod
+COPY    go.mod .
+COPY    go.sum .
 
-RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build
+# copy folder into container
+COPY . .
 
-RUN chmod +x ./simple-api
+# Build the application
+RUN go build -o main .
 
-EXPOSE 7081
-
-CMD /app/simple-api
-
+# command to running executable file
+CMD ["/build/main"]
