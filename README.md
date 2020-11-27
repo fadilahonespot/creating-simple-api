@@ -5,8 +5,8 @@ this application is a simple api application using golang and mysql
 ## library required
 - gin (router) [link](https://github.com/gin-gonic/gin)
 - gorm (orm)  [link](https://github.com/jinzhu/gorm)
-- uuid [link](github.com/google/uuid)
-- jwt (security) [link](https://github.com/google/uuid)
+- uuid [link](https://github.com/google/uuid)
+- jwt (security) [link](https://github.com/dgrijalva/jwt-go)
 - crypto (bycrip) [link](https://golang.org/x/crypto)
 ## Environment Variabel Declaration
 - 1. Define .env file
