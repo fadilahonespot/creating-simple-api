@@ -73,5 +73,40 @@ SECRET = yourKey
 }
 ```
 each account will get a different token code, you can copy the token code in the response body then enter it into the authorization section then select bearer token
+![input bearer](https://github.com/fadilahonespot/creating-simple-api/raw/master/postman-bearer-token.PNG)
+
+- Method POST : add question
+```url
+{{BASE_URL}}/question
+```
+- Request body add question
+```json
+{
+    "question": "lorem ipsum dolor sit amet consectetur adipiscing elit"
+}
+```
+- Method GET : Get all question
+```url
+{{BASE_URL}}/question?page=1&limit=20
+```
+- Method GET : Get detail question
+```url
+{{BASE_URL}}/question/{{UUID}}
+```
+- Method PUT : Update question
+```url
+{{BASE_URL}}/question/{{UUID}}
+```
+- request body update question
+```json
+{
+    "question": "INI UNTUK UPDATE 3",
+    "is_active": true
+}
+```
+- Methode DELETE : delete question
+```url
+{{BASE_URL}}/question/{{UUID}}
+```
 
 
