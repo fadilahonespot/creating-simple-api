@@ -37,3 +37,41 @@ SECRET = yourKey
 ```terminal
   $~ go run ./main.go
 ```
+
+## Testing
+- Method POST : User Registered
+```url
+{{BASE_URL}}/user/register
+```
+- Request Body
+```body
+{
+    "name": "andi",
+    "email": "andi@example.com",
+    "password": "123456"
+}
+```
+- Methode POST : User login
+```url
+{{BASE_URL}}/user/login
+```
+- Request Body
+```body
+{
+    "email": "andi@example.com",
+    "password": "123456"
+}
+```
+- Respon body
+```respon
+{
+    "success": true,
+    "message": "Success",
+    "data": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXNzIjoiJDJhJDEwJEQuUS9oM3FTT2dVbXFPSGNvdjdCbS5VbEdUUkl2UC52MW13WjkuTnNGVjFqN3BRLm1VdnVHIiwidXNlcl9pZCI6MX0.pjVi1Gn1ddokTsok5EQPDO8d8n60JIiZq3rB2Pl_kVI"
+    }
+}
+```
+each account will get a different token code, you can copy the token code in the response body then enter it into the authorization section then select bearer token
+
+
