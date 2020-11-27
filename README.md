@@ -3,11 +3,11 @@ this application is a simple api application using golang and mysql
 ## go version
 - 1.5
 ## library required
-- gin (router)[a link](https://github.com/gin-gonic/gin)
-- gorm (orm)  [a link](https://github.com/jinzhu/gorm)
-- uuid [a link](github.com/google/uuid)
-- jwt (security) [a link](https://github.com/google/uuid)
-- crypto (bycrip) [a link](https://golang.org/x/crypto)
+- gin (router) [link](https://github.com/gin-gonic/gin)
+- gorm (orm)  [link](https://github.com/jinzhu/gorm)
+- uuid [link](github.com/google/uuid)
+- jwt (security) [link](https://github.com/google/uuid)
+- crypto (bycrip) [link](https://golang.org/x/crypto)
 ## Environment Variabel Declaration
 - 1. Define .env file
 ```env
