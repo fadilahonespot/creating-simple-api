@@ -11,7 +11,8 @@ this application is a simple api application using golang and mysql
 ## Environment Variabel Declaration
 - 1. Define .env file
 ```env
- $~ mv .env
+ $~ touch .env
+ $~ nano .env
 ```
 - 2. Define PORT in .env file, for example:
 ```port
