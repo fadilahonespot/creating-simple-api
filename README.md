@@ -8,6 +8,7 @@ this application is a simple api application using golang and mysql
 - uuid [link](https://github.com/google/uuid)
 - jwt (security) [link](https://github.com/dgrijalva/jwt-go)
 - crypto (bycrip) [link](https://golang.org/x/crypto)
+
 -- note: You don't need to install the libraries one by one, because in the project there is a go mod, when the project is run for the first time it will automatically download all the libraries needed 
 ## Environment Variabel Declaration
 - 1. Define .env file
