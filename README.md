@@ -11,25 +11,26 @@ this application is a simple api application using golang and mysql
 
 -- note: You don't need to install the libraries one by one, because in the project there is a go mod, when the project is run for the first time it will automatically download all the libraries needed 
 ## Environment Variabel Declaration
-- 1. Define .env file
+1. Create an .env file at the root of the project
 ```env
- $~ touch .env
  $~ nano .env
 ```
-- 2. Define PORT in .env file, for example:
+-- note: Or you can change the .env.example file in the project to .env and adjust the settings
+2. Define PORT in .env file, for example:
 ```port
 PORT = 7081
 ```
-- 3. Define MYSQL in .env file, for example:
+3. Define MYSQL in .env file, for example:
 ```mysql
 MYSQL = root:@tcp(127.0.0.1:3306)/creating_simple_api?parseTime=true
 ```
 -- note: creating_simple_api is the name of the database, match the database that was created previously
-- 4. Define SECRET in .env file, for example:
+4. Define SECRET in .env file, for example:
 ```secret
 SECRET = yourKey
 ```
 -- note: this is a tool for generating passwords, you can make the password as you like
+
 ## Installation
 ### Using Docker
 ```docker
