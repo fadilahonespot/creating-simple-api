@@ -80,11 +80,11 @@ SECRET = yourKey
 each account will get a different token code, you can copy the token code in the response body then enter it into the authorization section then select bearer token
 ![input bearer](https://github.com/fadilahonespot/creating-simple-api/raw/master/postman-bearer-token.PNG)
 
-### Method POST : add question
+### Method POST : Add question
 ```url
 {{BASE_URL}}/question
 ```
-- Request
+- Request Body
 ```json
 {
     "question": "lorem ipsum dolor sit amet consectetur adipiscing elit"
@@ -109,7 +109,7 @@ each account will get a different token code, you can copy the token code in the
     "is_active": true
 }
 ```
-### Methode DELETE : delete question
+### Methode DELETE : Delete question
 ```url
 {{BASE_URL}}/question/{{UUID}}
 ```
