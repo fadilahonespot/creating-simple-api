@@ -44,7 +44,7 @@ SECRET = yourKey
 ```
 
 ## Testing
-- Method POST : User Registered
+### Method POST : User Registered
 ```url
 {{BASE_URL}}/user/register
 ```
@@ -56,7 +56,7 @@ SECRET = yourKey
     "password": "123456"
 }
 ```
-- Methode POST : User login
+### Methode POST : User login
 ```url
 {{BASE_URL}}/user/login
 ```
@@ -80,36 +80,36 @@ SECRET = yourKey
 each account will get a different token code, you can copy the token code in the response body then enter it into the authorization section then select bearer token
 ![input bearer](https://github.com/fadilahonespot/creating-simple-api/raw/master/postman-bearer-token.PNG)
 
-- Method POST : add question
+### Method POST : add question
 ```url
 {{BASE_URL}}/question
 ```
-- Request body add question
+- Request
 ```json
 {
     "question": "lorem ipsum dolor sit amet consectetur adipiscing elit"
 }
 ```
-- Method GET : Get all question
+### Method GET : Get all question
 ```url
 {{BASE_URL}}/question?page=1&limit=20
 ```
-- Method GET : Get detail question
+### Method GET : Get detail question
 ```url
 {{BASE_URL}}/question/{{UUID}}
 ```
-- Method PUT : Update question
+### Method PUT : Update question
 ```url
 {{BASE_URL}}/question/{{UUID}}
 ```
-- request body update question
+- request body
 ```json
 {
     "question": "INI UNTUK UPDATE 3",
     "is_active": true
 }
 ```
-- Methode DELETE : delete question
+### Methode DELETE : delete question
 ```url
 {{BASE_URL}}/question/{{UUID}}
 ```
