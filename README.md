@@ -16,6 +16,7 @@ this application is a simple api application using golang and mysql
  $~ nano .env
 ```
 -- note: Or you can change the .env.example file in the project to .env and adjust the settings
+
 2. Define PORT in .env file, for example:
 ```port
 PORT = 7081
@@ -25,6 +26,7 @@ PORT = 7081
 MYSQL = root:@tcp(127.0.0.1:3306)/creating_simple_api?parseTime=true
 ```
 -- note: creating_simple_api is the name of the database, match the database that was created previously
+
 4. Define SECRET in .env file, for example:
 ```secret
 SECRET = yourKey
