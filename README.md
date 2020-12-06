@@ -21,12 +21,12 @@ this application is a simple api application using golang and mysql
 ```shell
 $~ make logs
 ```
-#### Local app url
+#### Local app access
 - url
 ```local
 localhost:7081
 ```
-#### access phpmyadmin
+#### Access phpmyadmin
 - url
 ```local
 localhost:8085
