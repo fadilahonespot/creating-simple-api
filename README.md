@@ -31,7 +31,7 @@ localhost:7081
 ```local
 localhost:8085
 ```
-- user login
+- user login phpmyadmin
 ```access
 user: root
 password: pass123
