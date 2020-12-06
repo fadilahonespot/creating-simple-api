@@ -12,14 +12,23 @@ this application is a simple api application using golang and mysql
 -- note: You don't need to install the libraries one by one, because in the project there is a go mod, when the project is run for the first time it will automatically download all the libraries needed 
 
 ## Installation
-### Using Docker Makefile Command
-- run terminal
+### Using Makefile Command
+- deploy app in docker
 ```docker
  $~ make deploy
 ```
 - view logs of running projects
 ```shell
 $~ make logs
+```
+- remove project in docker
+```shell
+$~ make clear
+```
+### Using Docker Command
+- deploy app in docker
+```shell
+$~ docker-compose up -d
 ```
 #### Local app access
 - url
