@@ -3,31 +3,36 @@ this application is a simple api application using golang and mysql
 ## go version
 - 1.5
 ## library required
-- gin (router)[a link](https://github.com/gin-gonic/gin)
-- gorm (orm)  [a link](https://github.com/jinzhu/gorm)
-- uuid [a link](github.com/google/uuid)
-- jwt (security) [a link](https://github.com/google/uuid)
-- crypto (bycrip) [a link](https://golang.org/x/crypto)
+- gin (router) [link](https://github.com/gin-gonic/gin)
+- gorm (orm)  [link](https://github.com/jinzhu/gorm)
+- uuid [link](https://github.com/google/uuid)
+- jwt (security) [link](https://github.com/dgrijalva/jwt-go)
+- crypto (bycrip) [link](https://golang.org/x/crypto)
+
+-- note: You don't need to install the libraries one by one, because in the project there is a go mod, when the project is run for the first time it will automatically download all the libraries needed 
 ## Environment Variabel Declaration
-- 1. Define .env file
+1. Create an .env file at the root of the project
 ```env
- $~ touch .env
  $~ nano .env
 ```
-- 2. Define PORT in .env file, for example:
+-- note: Or you can change the .env.example file in the project to .env and adjust the settings
+
+2. Define PORT in .env file, for example:
 ```port
 PORT = 7081
 ```
-- 3. Define MYSQL in .env file, for example:
+3. Define MYSQL in .env file, for example:
 ```mysql
 MYSQL = root:@tcp(127.0.0.1:3306)/creating_simple_api?parseTime=true
 ```
 -- note: creating_simple_api is the name of the database, match the database that was created previously
-- 4. Define SECRET in .env file, for example:
+
+4. Define SECRET in .env file, for example:
 ```secret
 SECRET = yourKey
 ```
 -- note: this is a tool for generating passwords, you can make the password as you like
+
 ## Installation
 ### Using Docker
 ```docker
@@ -39,7 +44,7 @@ SECRET = yourKey
 ```
 
 ## Testing
-- Method POST : User Registered
+### Method POST : User Registered
 ```url
 {{BASE_URL}}/user/register
 ```
@@ -51,7 +56,7 @@ SECRET = yourKey
     "password": "123456"
 }
 ```
-- Methode POST : User login
+### Methode POST : User login
 ```url
 {{BASE_URL}}/user/login
 ```
@@ -75,36 +80,36 @@ SECRET = yourKey
 each account will get a different token code, you can copy the token code in the response body then enter it into the authorization section then select bearer token
 ![input bearer](https://github.com/fadilahonespot/creating-simple-api/raw/master/postman-bearer-token.PNG)
 
-- Method POST : add question
+### Method POST : Add question
 ```url
 {{BASE_URL}}/question
 ```
-- Request body add question
+- Request Body
 ```json
 {
     "question": "lorem ipsum dolor sit amet consectetur adipiscing elit"
 }
 ```
-- Method GET : Get all question
+### Method GET : Get all question
 ```url
 {{BASE_URL}}/question?page=1&limit=20
 ```
-- Method GET : Get detail question
+### Method GET : Get detail question
 ```url
 {{BASE_URL}}/question/{{UUID}}
 ```
-- Method PUT : Update question
+### Method PUT : Update question
 ```url
 {{BASE_URL}}/question/{{UUID}}
 ```
-- request body update question
+- request body
 ```json
 {
     "question": "INI UNTUK UPDATE 3",
     "is_active": true
 }
 ```
-- Methode DELETE : delete question
+### Methode DELETE : Delete question
 ```url
 {{BASE_URL}}/question/{{UUID}}
 ```
