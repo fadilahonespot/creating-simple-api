@@ -1,7 +1,47 @@
-version: '2.0'
+version: '3.3'
+
 services:
-  discussion-api:    
-    build: .
-    container_name: 'simple_api'
+  database:
+    image: mysql:5.7
+    environment:
+      - MYSQL_DATABASE=simple_api
+      - MYSQL_ROOT_PASSWORD=pass123
+    ports: 
+      - "3306:3306"
+    volumes:
+      - my-db:/var/lib/mysql
+    networks: 
+      - mynet
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin  
+    depends_on:
+      - database
+    restart: always
     ports:
-      - '7081:7081'
+      - '8085:80'
+    environment:
+      PMA_HOST: database
+      MYSQL_ROOT_PASSWORD: pass123 
+    networks:
+      - mynet
+
+  web:
+    build: .
+    environment: 
+      - MYSQL=root:pass123@tcp(database)/simple_api?parseTime=true
+      - PORT=7081
+      - SECRET=343d@3w%
+    ports:
+      - "7081:7081"
+    depends_on:
+      - database
+    networks:
+      - mynet
+
+volumes: 
+  my-db:
+
+networks:
+  mynet:
+    driver: "bridge"
