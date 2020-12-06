@@ -21,17 +21,20 @@ this application is a simple api application using golang and mysql
 ```shell
 $~ make logs
 ```
-- local app url
+#### Local app url
+- url
 ```local
 localhost:7081
 ```
-- access phpmyadmin
+#### access phpmyadmin
+- url
+```local
+localhost:8085
+```
+- user login
 ```access
 user: root
 password: pass123
-```
-```local
-localhost:8085
 ```
 ### Without Docker
 - change file .env.example name to .env
